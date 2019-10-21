@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+	
+	{% block content%}
+		<h1><center>WELCOME</center></h1>
+		<h3>Enter Your Requirements</h3>
+		<form action="{{url_for('predict')}}" method="POST">
+		<div class="form-group" >
+			<input type="text" class="form-control" name="Intercept" value="1" />
+		</div>
+		<div class="form-group">
+			<input type="text" name="SqFt" 	class="form-control" placeholder="Square Feet" required="required" />
+		</div>
+		<div class="form-group">
+			<input type="text" class="form-control" name="Bedrooms" placeholder="Bedrooms" />
+		</div>
+		<div class="form-group">
+			<input type="text" class="form-control" name="Bathrooms" placeholder="Bathrooms" />
+		</div>
+		<div class="form-group">
+			<input type="text" class="form-control" name="offers" placeholder="offers" />
+		</div >
+		<div class="form-group">
+			<input type="text" class="form-control" name="Bricks" placeholder="Bricks" />
+		</div>
+		<div class="form-group"> 
+			<input type="text" class="form-control" name="Neighour_west" placeholder="Neighbour_west" />
+		</div>
+			<div><input type="text" class="form-control" name="Neighbour_Nort" placeholder="Neighbour_north" />
+		</div>
+		<br>
+
+		<div class="form-group">
+			<button class="btn btn-primary" type="submit">GET PRICE</button>
+		</div>
+
+			
+		</form>
+	{% endblock%}
+		
+	
