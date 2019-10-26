@@ -6,11 +6,16 @@ app = Flask(__name__)
 model=pickle.load(open('model.pkl','rb'))
 
 @app.route('/')
+@app.route('/home')
 def home():
-    return render_template("home.html")
+    return render_template("home.html",title="Home")
 @app.route('/index')
 def index():
     return render_template("index.html")
+
+@app.route('/about')
+def about():
+    return render_template("about.html",title="About")
 
 
 @app.route('/predict',methods=['POST'])

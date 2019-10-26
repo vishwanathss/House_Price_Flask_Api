@@ -1,7 +1,10 @@
-body{
-	background-color:  black ! important;
-}
 
+body{
+	background-color: #696969;
+}
+img {
+  height:100%;
+}
 h1{
 	color: blue ;
 }
